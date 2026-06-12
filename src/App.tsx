@@ -1,18 +1,17 @@
-import './style.css';
+import "./style.css";
 
 // ============================================================
 // ここを自分の情報に書き換えてください
 // ============================================================
 
 const oshi = {
-  name: 'David Lynch',
-  catchcopy: '夢と悪夢の境界線を歩く映像作家。',
-  description:
-    'デイヴィッド・リンチ（1946-2025）はアメリカの映画監督・芸術家。「ブルーベルベット」「マルホランド・ドライブ」「ツイン・ピークス」などで知られ、難解でシュールな映像表現でカルト的な支持を集めた。映画にとどまらず絵画・写真・音楽など多方面で活動し、TM瞑想の普及にも情熱を注いだ。',
+  name: "名前",
+  catchcopy: "キャッチコピー",
+  description: "説明文",
   imageUrl:
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/David_Lynch_%282011%29.jpg/800px-David_Lynch_%282011%29.jpg',
-  genre: 'Film / Art',
-  since: '1977',
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/David_Lynch_%282011%29.jpg/800px-David_Lynch_%282011%29.jpg",
+  genre: "ジャンル",
+  since: "生年",
 };
 
 type Point = {
@@ -22,16 +21,16 @@ type Point = {
 
 const points: Point[] = [
   {
-    label: '映像',
-    text: '夢の論理で展開する独自のビジュアル言語。説明できないのに忘れられない場面を生み出す。',
+    label: "映像",
+    text: "夢の論理で展開する独自のビジュアル言語。説明できないのに忘れられない場面を生み出す。",
   },
   {
-    label: '音楽',
-    text: 'アンジェロ・バダラメンティとの長年のコラボレーション。音楽と映像が一体となって不安と美しさを作り出す。',
+    label: "音楽",
+    text: "アンジェロ・バダラメンティとの長年のコラボレーション。音楽と映像が一体となって不安と美しさを作り出す。",
   },
   {
-    label: '多才',
-    text: '映画監督にとどまらず画家・写真家・音楽家としても活動。あらゆる表現を通じて内なる世界を外に出し続けた。',
+    label: "多才",
+    text: "映画監督にとどまらず画家・写真家・音楽家としても活動。あらゆる表現を通じて内なる世界を外に出し続けた。",
   },
 ];
 
@@ -42,10 +41,26 @@ type Item = {
 };
 
 const picks: Item[] = [
-  { title: 'イレイザーヘッド', year: '1977', note: 'デビュー作にして既にリンチ・ワールドが全開。' },
-  { title: 'ブルーベルベット', year: '1986', note: '郊外の美しさの裏に潜む暗闇を描く代表作。' },
-  { title: 'マルホランド・ドライブ', year: '2001', note: '夢と現実が交錯するハリウッド・ノワール。カンヌ監督賞受賞。' },
-  { title: 'ツイン・ピークス', year: '1990', note: 'TVドラマの概念を変えた伝説的シリーズ。' },
+  {
+    title: "イレイザーヘッド",
+    year: "1977",
+    note: "デビュー作にして既にリンチ・ワールドが全開。",
+  },
+  {
+    title: "ブルーベルベット",
+    year: "1986",
+    note: "郊外の美しさの裏に潜む暗闇を描く代表作。",
+  },
+  {
+    title: "マルホランド・ドライブ",
+    year: "2001",
+    note: "夢と現実が交錯するハリウッド・ノワール。カンヌ監督賞受賞。",
+  },
+  {
+    title: "ツイン・ピークス",
+    year: "1990",
+    note: "TVドラマの概念を変えた伝説的シリーズ。",
+  },
 ];
 
 // ============================================================
@@ -62,7 +77,9 @@ function Hero() {
         </div>
       )}
       <div className="hero-content">
-        <p className="hero-genre">{oshi.genre} · since {oshi.since}</p>
+        <p className="hero-genre">
+          {oshi.genre} · since {oshi.since}
+        </p>
         <h1 className="hero-name">{oshi.name}</h1>
         <p className="hero-catchcopy">{oshi.catchcopy}</p>
       </div>
